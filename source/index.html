@@ -1,42 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
   <head>
     <meta charset="utf-8">
-    <title>Главная страница</title>
+    <title>Главная магазина Mishka</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
   <body>
 
+  <svg style="display: none;">
+    <symbol id="icon-search">
+      <path d="M16.47,14.93l-3.41-3.42a7.75,7.75,0,1,0-1.54,1.54l3.42,3.42a1,1,0,0,0,.77.33,1.1,1.1,0,0,0,1.1-1.1A1,1,0,0,0,16.47,14.93ZM1.4,6.9a5.5,5.5,0,1,1,5.5,5.5A5.5,5.5,0,0,1,1.4,6.9Z" transform="translate(0.8 0.8)"/>
+    </symbol>
+    <symbol id="icon-cart">
+      <path d="M19.54,7.23H16.39L13,.41a.75.75,0,1,0-1.34.67l3.07,6.14H5.58L8.65,1.09A.75.75,0,1,0,7.31.41L3.9,7.23H.75a.75.75,0,1,0,0,1.5H.91l.85,3a.73.73,0,0,0,.38,1.33L3.8,18.85H16.5l1.66-5.79a.74.74,0,0,0,.7-.74.74.74,0,0,0-.32-.6l.85-3h.16a.75.75,0,0,0,0-1.5ZM15.36,17.35H4.93L3.71,13.06H16.59ZM17,11.56H3.28L2.47,8.73H17.83Z" transform="translate(0 0)"/>
+    </symbol>
+  </svg>
+
   <header class="header-main">
-    <a class="header-main__logo">
-      <img src="img/logo_mobile.svg" width="85.6" height="35" alt="Логотип магазина Mishka">
-    </a>
-    <nav class="main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link">
-            Каталог товаров
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link">
-            Вязание на заказ
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <div class="user-nav">
-      <ul class="user-nav__list">
-        <li class="user-nav__item">
-          Поиск по сайту
-        </li>
-        <li class="user-nav__item">
-          Корзина: пока пуста
-        </li>
-      </ul>
+    <div class="container">
+      <div class="header-main__logo-wrapper">
+        <a class="header-main__logo">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+            <img class="header-main__logo-pic" src="img/mishka-logo-mobile.svg" width="85.6" height="35" alt="Логотип магазина Mishka для мобильных телефонов">
+          </picture>
+        </a>
+      </div>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button">Управление состоянием меню</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">
+              <span class="main-nav__link-text">
+                Каталог товаров
+              </span>
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">
+              <span class="main-nav__link-text">
+                Вязание на заказ
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="user-nav">
+        <ul class="user-nav__list">
+          <li class="user-nav__item user-nav__item--search">
+            <a class="user-nav__link" href="#">
+              <span class="user-nav__link-text">
+                Поиск по сайту
+                <svg class="user-nav__icon user-nav__icon--search" width="18" height="18" viewbox="0 0 17.6 17.6">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="user-nav__item user-nav__item--cart">
+            <a class="user-nav__link" href="#">
+              <span class="user-nav__link-text">
+                Корзина: пока пуста
+                <svg class="user-nav__icon user-nav__icon--cart" width="21" height="18px" viewbox="0 0 20.29 18.85">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="promo-nav">
+        <ul class="promo-nav__list">
+          <li class="promo-nav__item">
+            <a class="promo-nav__link" href="#">
+              Новые поступления
+            </a>
+          </li>
+          <li class="promo-nav__item">
+            <a class="promo-nav__link" href="#">
+              Распродажа
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p class="header-main__delivery">
+        Бесплатная доставка по России
+      </p>
     </div>
   </header>
+
+  <script>
+    var navMain = document.querySelector(".main-nav");
+    var navToggle = document.querySelector(".main-nav__toggle");
+
+      navMain.classList.remove("main-nav--nojs");
+
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
+        } else {
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
+        }
+      });
+  </script>
 
   </body>
 

@@ -1,0 +1,147 @@
+.user-nav {
+  width: 100%;
+}
+
+.user-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-nav__link {
+  display: block;
+  padding-top: 27px;
+  padding-bottom: 28px;
+  color: $font-color__main;
+}
+
+.user-nav__link:hover .user-nav__link-text {
+  opacity: 0.6;
+}
+
+.user-nav__link:hover .user-nav__icon {
+  fill: $icon-color__hover;
+}
+
+.user-nav__link:active .user-nav__link-text,
+.user-nav__link:active .user-nav__icon {
+  opacity: 0.3;
+}
+
+.user-nav__link-text {
+  position: relative;
+}
+
+.user-nav__icon {
+  position: absolute;
+  fill: rgba(35, 31, 32, 0.2);
+
+  &--search {
+    left: -43px;
+    top: 5px;
+  }
+
+  &--cart {
+    left: -45px;
+    top: 4px;
+  }
+}
+
+@media (max-width: $width__mobile-only) {
+  .user-nav__item--search {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 1px;
+      width: 150vw;
+      margin-left: -50vw;
+      background-color: $border-color__light;
+    }
+  }
+
+  .user-nav__link-text {
+    left: 50%;
+    margin-left: -85px;
+  }
+}
+
+@media (min-width: $width__tablet) {
+  .user-nav {
+    order: 1;
+    width: 348px;
+    box-sizing: border-box;
+  }
+
+  .user-nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 88px;
+  }
+
+  .user-nav__item--search {
+    min-width: 84px;
+    font-size: 0;
+    line-height: 0;
+    box-sizing: border-box;
+    border-right: 1px solid $border-color__light;
+    border-left: 1px solid $border-color__light;
+  }
+
+  .user-nav__item--cart {
+    width: 314px;
+    text-align: right;
+    box-sizing: border-box;
+  }
+
+  .user-nav__link {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .user-nav__item--cart .user-nav__link {
+    padding-top: 31px;
+    box-sizing: border-box;
+  }
+
+  .user-nav__icon {
+
+    &--search {
+      left: 33px;
+      top: 36px;
+    }
+
+    &--cart {
+      left: -52px;
+    }
+  }
+}
+
+@media (min-width: $width__desktop) {
+  .user-nav {
+    order: 3;
+    width: 350px;
+    align-self: stretch;
+  }
+
+  .user-nav__list {
+    height: 100%;
+  }
+
+  .user-nav__item:nth-of-type(2n+2) .user-nav__link {
+    padding-right: 2px;
+  }
+
+  .user-nav__icon {
+
+    &--search {
+      left: 32px;
+      top: 37px;
+    }
+  }
+}

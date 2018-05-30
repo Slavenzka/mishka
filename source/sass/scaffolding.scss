@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-width: $width__mobile;
+  padding: 0 100% * 30 / 320;
+  box-sizing: border-box;
+}
+
+@media (min-width: $width__tablet) {
+  .container {
+    padding: 0 100% * 50 / 768;
+  }
+}
+
+@media (min-width: $width__desktop) {
+  .container {
+    padding: 0 calc(100vw / 2 + 50px - 1150px / 2);
+  }
+}
