@@ -4,6 +4,11 @@
   background-repeat: no-repeat;
   background-position: 50% -18px;
   background-color: rgb(249, 249, 249);
+  background-size: 320px 373px;
+
+  @media (min-resolution: $retina__dpi), (min-resolution: $retina__dppx) {
+    background-image: url("../img/categories-background-mobile@2x.jpg");
+  }
 }
 
 .categories__slogan {
@@ -89,6 +94,11 @@
 
   &:hover::after {
     top: 18px;
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 }
 
@@ -107,14 +117,48 @@
 
   &:hover::after {
     top: 16px;
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 }
 
-.categories__item .categories__link:hover::after {
-  opacity: 0.7;
+.categories__link:active .categories__link-text {
+  opacity: 0.3;
 }
 
 .categories__link-text {
   display: block;
   width: 130px;
+}
+
+@media (min-width: $width__tablet) {
+  .categories {
+    margin-top: -41px;
+  }
+
+  .categories__slogan {
+    margin-top: 153px;
+    font-size: 43px;
+    line-height: 50px;
+    min-width: 668px;
+  }
+
+  .categories__list {
+    display: flex;
+    margin-top: 373px;
+  }
+
+  .categories__item {
+    width: 50%;
+  }
+
+  .categories__link {
+
+    &::before {
+      display: none;
+    }
+  }
 }

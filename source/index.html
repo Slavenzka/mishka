@@ -6,6 +6,7 @@
     <title>Главная магазина Mishka</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font">
   </head>
 
   <body>
@@ -22,7 +23,7 @@
   <header class="header-main">
     <div class="container">
       <div class="header-main__logo-wrapper">
-        <a class="header-main__logo">
+        <a class="header-main__logo" href="#">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
@@ -101,24 +102,22 @@
         <p class="categories__slogan">
           Милые штуки ручной работы&nbsp;для&nbsp;дома
         </p>
-        <div class="categories__wrapper">
-          <ul class="categories__list">
-            <li class="categories__item">
-              <a class="categories__link" href="#">
-                <span class="categories__link-text">
-                  Предметы интерьера
-                </span>
-              </a>
-            </li>
-            <li class="categories__item">
-              <a class="categories__link" href="#">
-                <span class="categories__link-text">
-                  Детские игрушки
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="categories__list">
+          <li class="categories__item">
+            <a class="categories__link" href="#">
+              <span class="categories__link-text">
+                Предметы интерьера
+              </span>
+            </a>
+          </li>
+          <li class="categories__item">
+            <a class="categories__link" href="#">
+              <span class="categories__link-text">
+                Детские игрушки
+              </span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
