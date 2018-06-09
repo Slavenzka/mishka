@@ -55,6 +55,7 @@
   .header-main {
     border-top: none;
     border-bottom: none;
+    z-index: 3;
   }
 
   .header-main .container {
@@ -115,6 +116,20 @@
 }
 
 @media (min-width: $width__desktop) {
+  .header-main {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 40px;
+      left: calc(100vw / 2 - 1150px / 2);
+      height: 1px;
+      width: 1150px;
+      background-color: $border-color__light;
+    }
+  }
+
   .header-main__logo-wrapper {
     position: static;
     order: 1;
@@ -137,21 +152,5 @@
 
   .header-main__delivery {
     order: 5;
-  }
-}
-
-@media (min-width: $width__desktop) {
-  .header-main {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 40px;
-      left: calc(100vw / 2 - 1150px / 2);
-      height: 1px;
-      width: 1150px;
-      background-color: $border-color__light;
-    }
   }
 }
