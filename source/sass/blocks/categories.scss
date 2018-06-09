@@ -1,0 +1,238 @@
+.categories {
+  overflow: hidden;
+  background-image: url("../img/categories-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% -18px;
+  background-color: rgb(249, 249, 249);
+  background-size: 320px 373px;
+
+  @media (min-resolution: $retina__dpi), (min-resolution: $retina__dppx) {
+    background-image: url("../img/categories-background-mobile@2x.jpg");
+  }
+}
+
+.categories__slogan {
+  margin: 0 auto;
+  margin-top: 70px;
+  padding: 0;
+  width: 260px;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  font-family: $font-family__main;
+  color: $font-color__main;
+  text-align: center;
+}
+
+.categories__list {
+  margin: 0;
+  margin-top: 122px;
+  padding: 0;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: $font-family__main;
+  list-style: none;
+}
+
+.categories__link {
+  position: relative;
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(99, 209, 187);
+  z-index: 3;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -50vw;
+    width: 150vw;
+    height: 100%;
+    background-color: rgb(99, 209, 187);
+    z-index: -1;
+  }
+
+  &:hover {
+    padding-top: 20px;
+    padding-bottom: 35px;
+  }
+
+  &:hover::before {
+    top: -5px;
+    height: calc(100% + 5px);
+    background-color: rgb(89, 213, 188);
+  }
+}
+
+.categories__item:nth-child(2n+2) .categories__link {
+  background-color: rgb(86, 195, 178);
+
+  &::before {
+    background-color: rgb(86, 195, 178);
+  }
+
+  &:hover::before {
+    background-color: rgb(70, 193, 174);
+  }
+}
+
+.categories__item:first-child .categories__link {
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 6px;
+    width: 40.22px;
+    height: 62.41px;
+    background-image: url("../img/icon-lamp.svg");
+    opacity: 0.5;
+  }
+
+  &:hover::after {
+    top: 18px;
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.categories__item:nth-child(2) .categories__link {
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    right: -3px;
+    width: 60px;
+    height: 59.62px;
+    background-image: url("../img/icon-brick.svg");
+    opacity: 0.5;
+  }
+
+  &:hover::after {
+    top: 16px;
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.categories__link:active .categories__link-text {
+  opacity: 0.3;
+}
+
+.categories__link-text {
+  display: block;
+  width: 130px;
+}
+
+@media (min-width: $width__tablet) {
+  .categories {
+    position: relative;
+    margin-top: -41px;
+    background-image: url("../img/categories-background-tablet@1x.jpg");
+    background-size: 768px 746px;
+    background-position: 50% -1px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      width: 100%;
+      height: 34px;
+      background-image: url("../img/decoration-wave.svg");
+      background-repeat: repeat no-repeat;
+      background-size: 768px 100%;
+      z-index: 3;
+    }
+  }
+
+  .categories__slogan {
+    margin-top: 153px;
+    font-size: 43px;
+    line-height: 50px;
+    min-width: 668px;
+  }
+
+  .categories__list {
+    display: flex;
+    margin-top: 373px;
+  }
+
+  .categories__item {
+    position: relative;
+    width: 50%;
+    z-index: 1;
+  }
+
+  .categories__link {
+    padding-top: 28px;
+    padding-left: 36px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      width: 100%;
+      left: 0;
+    }
+
+    &:hover {
+      padding-top: 23px;
+      padding-bottom: 35px;
+    }
+  }
+
+  .categories__item:first-child .categories__link {
+
+    &::after {
+      top: 30px;
+      right: 36px;
+    }
+
+    &:hover::after {
+      top: 25px;
+    }
+  }
+
+  .categories__item:nth-child(2) .categories__link {
+    &::after {
+      top: 32px;
+      right: 34px;
+    }
+
+    &:hover::after {
+      top: 27px;
+    }
+  }
+}
+
+@media (min-width: $width__desktop) {
+  .categories {
+
+    &::before {
+      width: 100%;
+      height: 34px;
+      background-image: url("../img/decoration-wave.svg");
+      background-size: contain;
+      background-position: -42px 0px;
+    }
+  }
+
+  .categories__slogan {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .categories__list {
+    margin-top: 359px;
+  }
+}

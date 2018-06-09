@@ -3,7 +3,6 @@
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
-  background-color: $background-color__main;
   border-top: 1px solid $border-color__light;
   border-bottom: 1px solid $border-color__light;
   overflow: hidden;
@@ -20,6 +19,15 @@
 
 .header-main__logo picture {
   line-height: 0;
+}
+
+
+.header-main__logo[href]:hover .header-main__logo-pic {
+  opacity: 0.6;
+}
+
+.header-main__logo[href]:active .header-main__logo-pic {
+  opacity: 0.3;
 }
 
 @media (max-width: $width__mobile-only) {
@@ -47,6 +55,7 @@
   .header-main {
     border-top: none;
     border-bottom: none;
+    z-index: 3;
   }
 
   .header-main .container {
@@ -58,7 +67,7 @@
 
   .header-main__logo {
     position: absolute;
-    left: 48px;
+    left: 100% * 48 / 768;
     padding: 0;
   }
 
@@ -107,6 +116,20 @@
 }
 
 @media (min-width: $width__desktop) {
+  .header-main {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 40px;
+      left: calc(100vw / 2 - 1150px / 2);
+      height: 1px;
+      width: 1150px;
+      background-color: $border-color__light;
+    }
+  }
+
   .header-main__logo-wrapper {
     position: static;
     order: 1;
@@ -131,20 +154,3 @@
     order: 5;
   }
 }
-
-@media (min-width: $width__desktop) {
-  .header-main {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 40px;
-      left: calc(100vw / 2 - 1150px / 2);
-      height: 1px;
-      width: 1150px;
-      background-color: $border-color__light;
-    }
-  }
-}
-
