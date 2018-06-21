@@ -1,18 +1,155 @@
+.promotion {
+  position: relative;
+  padding-bottom: 42px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: -7px;
+    width: calc(100% + 7px);
+    height: 23px;
+    background-image: url("../img/decoration-wave-pagesplitter.svg");
+    background-repeat: repeat no-repeat;
+    background-size: 320px 23px;
+  }
+}
+
 .promotion .container {
+  padding-top: 27px;
   display: flex;
   flex-direction: column;
-//  align-items: center;
+}
+
+.promotion__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .promotion__title {
+  position: relative;
+  align-self: center;
   margin: 0;
+  width: 260px;
   font-family: $font-family__main;
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
   color: $font-color__main;
+
+  &--week-special::before {
+    content: "товар недели";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $font-color__highlight;
+  }
 }
 
 .promotion__description {
+  margin-top: 48px;
+  margin-bottom: 17px;
+  width: 260px;
+  font-family: $font-family__main;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $font-color__text;
+}
+
+.promotion__pic {
+  margin-top: 28px;
+  width: 260px;
+  height: 315px;
+}
+
+.promotion__order-wrapper {
+   align-self: stretch;
+}
+
+.promotion__price {
   margin: 0;
+  margin-top: 20px;
+  font-family: $font-family__main;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: $font-color__text;
+}
+
+.promotion__button {
+  margin-top: 26px;
+  width: 100%;
+}
+
+@media (min-width: $width__tablet) {
+  .promotion {
+    padding-bottom: 60px;
+
+    &::before {
+      left: -20px;
+      width: calc(100% + 20px);
+      background-size: 768px 23px;
+    }
+  }
+
+  .promotion .container {
+    padding-top: 46px;
+  }
+
+  .promotion__title {
+    width: 100%;
+    font-size: 43px;
+    line-height: 50px;
+
+    &--week-special::before {
+      top: 11px;
+      right: 13px;
+      left: auto;
+      width: 100px;
+      line-height: 17px;
+      text-align: center;
+    }
+  }
+
+  .promotion__description-wrapper {
+    max-height: 800px;
+    align-content: space-between;
+  }
+
+  .promotion__description {
+    margin-bottom: 36px;
+    padding-right: 0;
+    width: 291px;
+    box-sizing: border-box;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .promotion picture {
+    order: 1;
+  }
+
+  .promotion__pic {
+    width: 333px;
+    height: 404px;
+    margin-top: 57px;
+  }
+
+  .promotion__price {
+    margin-top: 56px;
+    font-size: 20px;
+  }
+
+  .promotion__button {
+    margin-top: 34px;
+    width: 100%;
+  }
 }

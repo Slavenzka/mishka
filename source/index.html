@@ -125,7 +125,7 @@
         Информация о товаре недели
       </h2>
       <div class="container">
-        <h3 class="promotion__title">
+        <h3 class="promotion__title promotion__title--week-special">
           Вязаные корзинки
         </h3>
         <div class="promotion__description-wrapper">
@@ -158,17 +158,18 @@
               </td>
             </tr>
           </table>
-        </div>
-        <picture>
-          <img class="promotion__pic" src="img/bestseller-pic-mobile@1x.jpg" srcset="img/bestseller-pic-mobile@1x.jpg 1x, img/bestseller-pic-mobile@2x.jpg 2x" alt="Фото товара недели">
-        </picture>
-        <div class="promotion__order-wrapper">
-          <p class="promotion__price">
-            Цена: 990 руб.
-          </p>
-          <button class="button promotion__button" type="button">
-            Заказать
-          </button>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/bestseller-pic-mobile@1x.jpg 1x, img/bestseller-pic-tablet@2x.jpg 2x">
+            <img class="promotion__pic" src="img/bestseller-pic-mobile@1x.jpg" srcset="img/bestseller-pic-mobile@1x.jpg 1x, img/bestseller-pic-mobile@2x.jpg 2x" alt="Фото товара недели">
+          </picture>
+          <div class="promotion__order-wrapper">
+            <p class="promotion__price">
+              Цена: 990 руб.
+            </p>
+            <button class="button promotion__button" type="button">
+              Заказать
+            </button>
+          </div>
         </div>
       </div>
     </section>
