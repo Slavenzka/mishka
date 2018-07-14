@@ -8,4 +8,13 @@
   text-transform: uppercase;
   border: 2px solid $font-color__text;
   background-color: $background-color__main;
+
+  &:hover {
+    color: $background-color__main;
+    background-color: $font-color__text;
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
 }

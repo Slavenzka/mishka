@@ -18,6 +18,8 @@
 }
 
 .about-us__features-list {
+  margin: 0;
+  padding: 0;
   width: 260px;
 }
 
@@ -34,10 +36,18 @@
   }
 
   .about-us__features-list {
-    width: auto;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $width__desktop) {
+  .about-us {
+    padding: 0 175px;
   }
 
-  .about-us__features-list {
-    margin-top: 150px;
+  .about-us__title {
+    margin-top: 68px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }

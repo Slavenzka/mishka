@@ -1,6 +1,4 @@
 .features {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   font-family: $font-family__main;
@@ -100,12 +98,24 @@
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
     font-size: 20px;
     line-height: 22px;
   }
 
   .features__item {
-    width: 50%;
+    margin-top: 103px;
+    width: 334px;
     order: 0;
+  }
+
+  .features__item:not(:first-of-type):not(:nth-of-type(2)) {
+    margin-top: 111px;
+  }
+}
+
+@media (min-width: $width__desktop) {
+  .features__item {
+    width: 350px;
   }
 }
