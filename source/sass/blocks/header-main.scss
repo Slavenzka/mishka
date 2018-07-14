@@ -35,14 +35,14 @@
     position: relative;
 
     &::before {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    height: 1px;
-    width: 150vw;
-    margin-left: -50vw;
-    background-color: $border-color__light;
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 1px;
+      width: 150vw;
+      margin-left: -50vw;
+      background-color: $border-color__light;
     }
   }
 

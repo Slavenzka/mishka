@@ -53,20 +53,20 @@
     }
   }
 
-    .main-nav__item {
-      position: relative;
+  .main-nav__item {
+    position: relative;
 
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        height: 1px;
-        width: 150vw;
-        margin-left: -50vw;
-        background-color: $border-color__light;
-      }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 1px;
+      width: 150vw;
+      margin-left: -50vw;
+      background-color: $border-color__light;
     }
+  }
 
   .main-nav--closed .main-nav__list,
   .main-nav--closed + .user-nav {
@@ -161,7 +161,7 @@
   .main-nav {
     min-width: 411px;
     order: 0;
-    padding-top: 0px;
+    padding-top: 0;
     font-size: 17px;
   }
 

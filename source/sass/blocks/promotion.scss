@@ -70,7 +70,7 @@
 }
 
 .promotion__order-wrapper {
-   align-self: stretch;
+  align-self: stretch;
 }
 
 .promotion__price {
@@ -101,17 +101,20 @@
   }
 
   .promotion .container {
+    justify-content: space-around;
     padding-top: 46px;
   }
 
   .promotion__title {
-    width: 100%;
+    margin-right: auto;
+    width: auto;
+    align-self: flex-start;
     font-size: 43px;
     line-height: 50px;
 
     &--week-special::before {
       top: 11px;
-      right: 13px;
+      right: -228px;
       left: auto;
       width: 100px;
       line-height: 17px;
@@ -121,7 +124,7 @@
 
   .promotion__description-wrapper {
     max-height: 800px;
-    align-content: space-between;
+    align-content: space-around;
   }
 
   .promotion__description {
@@ -135,6 +138,7 @@
 
   .promotion picture {
     order: 1;
+    margin-left: 44px;
   }
 
   .promotion__pic {
@@ -184,12 +188,17 @@
   }
 
   .promotion__description-wrapper {
+    align-content: space-between;
     margin-left: 175px;
   }
 
   .promotion__description {
     width: 292px;
     margin-bottom: 50px;
+  }
+
+  .promotion picture {
+    margin-left: 0;
   }
 
   .promotion__pic {
