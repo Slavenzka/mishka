@@ -34,6 +34,10 @@ a {
 
 @media (min-width: $width__desktop) {
   .container {
-    padding: 0 calc(100vw / 2 + 50px - 1150px / 2);
+    // padding: 0 calc(100vw / 2 + 50px - 1150px / 2);
+    width: 1050px;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 }

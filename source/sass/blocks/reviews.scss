@@ -1,0 +1,148 @@
+.reviews {
+  font-family: $font-family__main;
+}
+
+.reviews .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews__title {
+  margin: 0;
+  margin-bottom: 24px;
+  width: 260px;
+  font-size: 25px;
+  line-height: 30px;
+  color: $font-color__main;
+}
+
+.reviews__text {
+  margin: 0;
+  margin-bottom: 27px;
+  width: 260px;
+  font-size: 15px;
+  line-height: 30px;
+  color: $font-color__text;
+}
+
+.reviews__author {
+  width: 260px;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $font-color__main;
+}
+
+.reviews__author span {
+  display: block;
+  margin-top: 3px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  color: $font-color__text;
+}
+
+.reviews__slider {
+  position: relative;
+  width: 260px;
+  margin-top: 29px;
+  display: flex;
+  border: 1px solid $border-color__light;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: $border-color__light;
+    z-index: 1;
+  }
+}
+
+.reviews__slider-button {
+  position: relative;
+  padding-bottom: 16px;
+  width: 50%;
+  font-size: 0;
+  border: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    background-image: url("../img/review-slider__arrow.svg");
+  }
+
+  &:hover {
+    opacity: 0.6;
+    background-color: $background-color__main;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.reviews__slider-button--previous {
+  &::before {
+    top: 12px;
+    left: 50%;
+    margin-left: -28px;
+  }
+}
+
+.reviews__slider-button--next {
+  &::before {
+    top: 12px;
+    left: 50%;
+    margin-left: -27px;
+    transform: rotate(180deg);
+  }
+}
+
+.reviews__button {
+  margin-top: 38px;
+  width: 260px;
+  font-size: 18px;
+}
+
+@media (min-width: $width__tablet) {
+  .reviews .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .reviews__title {
+    order: 0;
+    flex-grow: 1;
+    min-width: 50%;
+  }
+
+  .reviews__text {
+    order: 2;
+    // flex-grow: 1;
+    width: 668px;
+  }
+
+  .reviews__author {
+    order: 3;
+    flex-grow: 1;
+    width: 50%;
+  }
+
+  .reviews__slider {
+    order: 4;
+  }
+
+  .reviews__button {
+    order: 1;
+    margin: 0;
+  }
+}

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 55px;
+  padding-bottom: 52px;
 }
 
 .about-us__title {
@@ -41,7 +41,7 @@
 }
 
 @media (min-width: $width__desktop) {
-  .about-us {
+  .about-us .container {
     padding: 0 175px;
   }
 
