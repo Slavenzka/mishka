@@ -26,6 +26,7 @@
 @media (min-width: $width__tablet) {
   .about-us .container {
     align-items: flex-start;
+    padding-bottom: 83px;
   }
 
   .about-us__title {
@@ -42,7 +43,7 @@
 
 @media (min-width: $width__desktop) {
   .about-us .container {
-    padding: 0 175px;
+    padding: 0 175px 90px 175px;
   }
 
   .about-us__title {
