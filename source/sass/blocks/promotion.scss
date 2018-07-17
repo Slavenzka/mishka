@@ -71,6 +71,7 @@
 
 .promotion__order-wrapper {
   align-self: stretch;
+  text-align: center;
 }
 
 .promotion__price {
@@ -80,13 +81,14 @@
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
-  text-align: center;
   color: $font-color__text;
 }
 
 .promotion__button {
+  display: inline-block;
+  vartical-align: middle;
   margin-top: 26px;
-  width: 100%;
+  width: 260px;
 }
 
 @media (min-width: $width__tablet) {
@@ -101,7 +103,6 @@
   }
 
   .promotion .container {
-    justify-content: space-around;
     padding-top: 46px;
   }
 
@@ -124,7 +125,7 @@
 
   .promotion__description-wrapper {
     max-height: 800px;
-    align-content: space-around;
+    align-content: space-between;
   }
 
   .promotion__description {
