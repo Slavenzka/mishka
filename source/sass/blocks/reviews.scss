@@ -61,6 +61,7 @@
 .reviews__slider {
   position: relative;
   width: 260px;
+  box-sizing: border-box;
   margin-top: 29px;
   display: flex;
   border: 1px solid $border-color__light;
