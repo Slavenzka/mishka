@@ -94,9 +94,11 @@
 .contacts__button {
   align-self: center;
   width: 260px;
+  box-sizing: border-box;
   margin-top: 39px;
   padding: 13px 0 15px 0;
   font-size: 18px;
+  text-align: center;
 }
 
 @media (min-width: $width__tablet) {

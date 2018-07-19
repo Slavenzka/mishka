@@ -126,7 +126,9 @@
 .reviews__button {
   margin-top: 38px;
   width: 260px;
+  box-sizing: border-box;
   font-size: 18px;
+  text-align: center;
 }
 
 @media (min-width: $width__tablet) {

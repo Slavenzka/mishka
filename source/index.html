@@ -250,9 +250,11 @@
               Следующий
             </button>
           </div>
-          <button class="button reviews__button">
-            Написать
-          </button>
+          <a class="button reviews__button" href="#">
+            <span>
+              Написать
+            </span>
+          </a>
         </div>
       </section>
       <section class="contacts">
@@ -276,9 +278,11 @@
             </ul>
           </div>
           <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/-/CBuvyDSH9B&ll=59.938631,30.323055"></iframe>
-          <button class="button contacts__button">
-            Напишите нам
-          </button>
+          <a class="button contacts__button" href="#">
+            <span>
+              Напишите нам
+            </span>
+          </a>
       </section>
     </main>
 
@@ -326,42 +330,36 @@
       </div>
     </footer>
 
-    <div class="modal">
+    <div class="modal visually-hidden">
       <div class="modal__wrapper">
         <p class="modal__purpose">
           Добавить в корзину
         </p>
-        <span class="modal__hint">
+        <p class="modal__hint">
           Выберите размер:
-        </span>
+        </p>
         <ul class="modal__size-list">
-          <li class="modal__size-item">S</li>
-          <li class="modal__size-item">M</li>
-          <li class="modal__size-item">L</li>
+          <li class="modal__size-item modal__size-item--checked">
+            S
+          </li>
+          <li class="modal__size-item">
+            M
+          </li>
+          <li class="modal__size-item">
+            L
+          </li>
         </ul>
         <button class="button modal__button">
-          Добавить
+          <span>
+            Добавить
+          </span>
         </button>
       </div>
     </div>
 
-    <script>
-      var navMain = document.querySelector(".main-nav");
-      var navToggle = document.querySelector(".main-nav__toggle");
-
-        navMain.classList.remove("main-nav--nojs");
-
-        navToggle.addEventListener("click", function() {
-          if (navMain.classList.contains("main-nav--closed")) {
-            navMain.classList.remove("main-nav--closed");
-            navMain.classList.add("main-nav--opened");
-          } else {
-            navMain.classList.add("main-nav--closed");
-            navMain.classList.remove("main-nav--opened");
-          }
-        });
-    </script>
     <script src="js/picturefill.min.js"></script>
+    <script src="js/menu-toggle.js"></script>
+    <script src="js/modal-toggle.js"></script>
 
   </body>
 
