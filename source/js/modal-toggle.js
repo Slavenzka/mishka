@@ -7,9 +7,19 @@
   var modalInitButton = document.querySelector('.promotion__button');
   var modalCloseButton = modal.querySelector('.modal__button');
   var sizeList = modal.querySelector('.modal__size-list');
+  var sizeElements = sizeList.querySelectorAll('.modal__size-item');
+
+  var selectDefaultSize = function (elementsArray) {
+      for (var i = 0; i < elementsArray.length; i++) {
+        elementsArray[i].classList.remove('modal__size-item--checked');
+      }
+
+      sizeElements[0].classList.add('modal__size-item--checked');
+  };
 
   modalInitButton.addEventListener('click', function (evt) {
     evt.preventDefault();
+    selectDefaultSize(sizeElements);
     modal.classList.remove('visually-hidden');
 
     modalCloseButton.addEventListener('click', function (evt) {
@@ -24,7 +34,6 @@
     });
 
     sizeList.addEventListener('click', function (evt) {
-      var sizeElements = sizeList.querySelectorAll('.modal__size-item');
 
       if (evt.target.classList.contains('modal__size-item')) {
         for (var i = 0; i < sizeElements.length; i++) {
