@@ -1,22 +1,31 @@
 .modal {
   position: fixed;
-  top: 50vh;
-  left: 50%;
-  width: 320px;
-  margin-top: -168px;
-  margin-left: -160px;
-  font-family: $font-family__main;
-  background-color: $background-color__main;
-  z-index: 3;
+  top: 0vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 4;
 }
 
 .modal__wrapper {
+  position: fixed;
+  top: 50vh;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding: 0 30px;
+  width: 320px;
+  margin-top: -168px;
+  margin-left: calc(50% - 160px);
+  padding: 30px 30px 46px 30px;
+  font-family: $font-family__main;
   box-sizing: border-box;
+  border-top: 1px solid rgb(198, 198, 198);
+  border-bottom: 1px solid rgb(198, 198, 198);
+  background-color: $background-color__main;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  z-index: 3;
 }
 
 .modal__purpose {
@@ -30,8 +39,91 @@
   text-align: center;
 }
 
+.modal__hint {
+  margin: 0;
+  margin-top: 12px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 30px;
+  color: $font-color__text;
+}
+
 .modal__size-list {
   margin: 0;
+  margin-top: 23px;
   padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
   list-style: none;
+}
+
+.modal__size-item {
+  width: 82px;
+  padding: 16px 0 16px 0;
+  box-sizing: border-box;
+  text-align: center;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  cursor: pointer;
+
+  &:not(.modal__size-item--checked):hover {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:active {
+    border-color: rgb(98, 209, 186);
+  }
+}
+
+.modal__size-item--checked {
+  border-color: rgb(98, 209, 186);
+}
+
+.modal__button {
+  margin-top: 31px;
+  width: 100%;
+  color: $background-color__main;
+  border-color: $font-color__highlight;
+  background-color: $font-color__highlight;
+
+  &:hover {
+    background-color: $font-color__highlight;
+  }
+}
+
+@media (min-width: $width__tablet) {
+  .modal__wrapper {
+    padding-top: 33px;
+    margin: -168px auto 0 auto;
+    margin-left: calc(50vw - 284px);
+    width: 568px;
+    box-sizing: border-box;
+    border: 1px solid rgb(198, 198, 198);
+  }
+
+  .modal__purpose {
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal__hint {
+    margin-top: 14px;
+    font-size: 17px;
+  }
+
+  .modal__size-list {
+    margin-top: 21px;
+    width: 350px;
+  }
+
+  .modal__size-item {
+    width: 112px;
+  }
+
+  .modal__button {
+    width: 350px;
+  }
 }
