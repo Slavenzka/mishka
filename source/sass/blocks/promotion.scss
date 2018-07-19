@@ -124,6 +124,7 @@
   }
 
   .promotion__description-wrapper {
+    height: 465px;
     max-height: 800px;
     align-content: space-between;
   }
@@ -161,10 +162,11 @@
 
 @media (min-width: $width__desktop) {
   .promotion {
-    padding-bottom: 83px;
+    padding-bottom: 73px;
 
     &::before {
-      left: calc(100vw / 2 + 50px - 1150px / 2);
+      left: 50%;
+      margin-left: calc(-1050px / 2);
       width: 1050px;
       background-size: 1050px 25px;
       background-position: 26px 0;
@@ -191,6 +193,8 @@
   .promotion__description-wrapper {
     align-content: space-between;
     margin-left: 175px;
+    height: 541px;
+    max-height: 800px;
   }
 
   .promotion__description {

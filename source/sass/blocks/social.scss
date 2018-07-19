@@ -1,0 +1,41 @@
+.social {
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 27px;
+  width: 146px;
+  list-style: none;
+  font-size: 0;
+}
+
+.social__item--instagram {
+  margin-right: 41px;
+  margin-bottom: 2px;
+}
+
+.social__item--facebook {
+  margin-right: 40px;
+}
+
+.social__item--twitter {
+  margin-bottom: 3px;
+}
+
+.social__item svg {
+  &:hover {
+    fill: $font-color__highlight-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $width__tablet) {
+  .social {
+    margin-top: 7px;
+    margin-left: 80px;
+    padding-bottom: 0;
+  }
+}
