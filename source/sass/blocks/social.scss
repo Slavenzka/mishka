@@ -31,3 +31,11 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: $width__tablet) {
+  .social {
+    margin-top: 7px;
+    margin-left: 80px;
+    padding-bottom: 0;
+  }
+}

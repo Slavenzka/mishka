@@ -1,0 +1,37 @@
+.modal {
+  position: fixed;
+  top: 50vh;
+  left: 50%;
+  width: 320px;
+  margin-top: -168px;
+  margin-left: -160px;
+  font-family: $font-family__main;
+  background-color: $background-color__main;
+  z-index: 3;
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.modal__purpose {
+  margin: 0;
+  padding: 0 50px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $font-color__main;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal__size-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
