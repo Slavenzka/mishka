@@ -140,6 +140,10 @@
     background-size: 768px 746px;
     background-position: 50% -1px;
 
+    @media (min-resolution: $retina__dpi), (min-resolution: $retina__dppx) {
+      background-image: url("../img/categories-background-tablet@2x.jpg");
+    }
+
     &::before {
       content: "";
       position: absolute;
