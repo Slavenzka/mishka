@@ -1,31 +1,10 @@
 .contacts {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding-bottom: 39px;
-  min-height: 856px;
   font-family: $font-family__main;
   color: $font-color__text;
-  background-image: url("../img/contacts-map-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center 308px;
-
-  @media (min-resolution: $retina__dpi), (min-resolution: $retina__dppx) {
-    background-image: url("../img/contacts-map-mobile@2x.jpg");
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 67px;
-    height: 102px;
-    top: 452px;
-    left: calc(50% - 22px);
-    background-image: url("../img/contacts-map-pin.svg");
-    background-repeat: no-repeat;
-  }
 }
 
 .contacts .container {
@@ -48,6 +27,7 @@
 .contacts__list {
   margin: 0;
   margin-top: 26px;
+  margin-bottom: 37px;
   padding: 0;
   width: 260px;
   font-size: 15px;
@@ -82,9 +62,33 @@
   margin-left: 31px;
 }
 
+.contacts__location {
+  position: relative;
+  width: 100%;
+  height: 457px;
+  background-image: url("../img/contacts-map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 320px 457px;
+
+  @media (min-resolution: $retina__dpi), (min-resolution: $retina__dppx) {
+    background-image: url("../img/contacts-map-mobile@2x.jpg");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 102px;
+    top: 144px;
+    left: calc(50% - 22px);
+    background-image: url("../img/contacts-map-pin.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 .contacts__map {
   position: relative;
-  margin-top: 37px;
   width: 100%;
   height: 457px;
   border: 0;
@@ -105,17 +109,6 @@
   .contacts {
     padding-bottom: 57px;
     min-height: 875px;
-    background-image: url("../img/contacts-map-tablet@1x.jpg");
-    background-position: center 311px;
-
-    @media (min-resolution: $retina__dpi), (min-resolution: $retina__dppx) {
-      background-image: url("../img/contacts-map-tablet@2x.jpg");
-    }
-
-    &::before {
-      top: 449px;
-      left: calc(50% - 21px);
-    }
   }
 
   .contacts .container {
@@ -156,6 +149,7 @@
   .contacts__list {
     display: flex;
     margin-top: 49px;
+    margin-bottom: 56px;
     width: 100%;
     font-size: 17px;
   }
@@ -177,8 +171,18 @@
     margin-left: 25px;
   }
 
-  .contacts__map {
-    margin-top: 56px;
+  .contacts__location {
+    background-image: url("../img/contacts-map-tablet@1x.jpg");
+    background-size: 768px 457px;
+
+    @media (min-resolution: $retina__dpi), (min-resolution: $retina__dppx) {
+      background-image: url("../img/contacts-map-tablet@2x.jpg");
+    }
+
+    &::before {
+      top: 138px;
+      left: calc(50% - 21px);
+    }
   }
 
   .contacts__button {
@@ -195,18 +199,11 @@
     width: 1050px;
     justify-content: flex-start;
     align-items: flex-start;
+    align-content: flex-start;
     flex-wrap: wrap;
-    padding-bottom: 105px;
-    height: 538px;
+    padding-bottom: 5px;
+    height: 638px;
     min-height: auto;
-    background-image: url("../img/contacts-map-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: right 81px;
-
-    &::before {
-      top: 226px;
-      left: calc(50% + 239px);
-    }
   }
 
   .contacts .container {
@@ -248,16 +245,33 @@
     margin-top: 30px;
   }
 
-  .contacts__map {
+  .contacts__location {
     order: 1;
     margin-top: 81px;
-    width: 50%;
+    width: calc(1050px / 2);
+    background-image: url("../img/contacts-map-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left 0;
+    background-size: 525px 457px;
+
+    @media (min-resolution: $retina__dpi), (min-resolution: $retina__dppx) {
+      background-image: url("../img/contacts-map-desktop@2x.jpg");
+    }
+
+    &::before {
+      top: 145px;
+      left: calc(50% - 49px);
+    }
+  }
+
+  .contacts__map {
+    width: 100%;
   }
 
   .contacts__button {
     order: 0;
     align-self: flex-start;
-    margin-top: 79px;
+    margin-top: 23px;
     margin-left: 175px;
   }
 }

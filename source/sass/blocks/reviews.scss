@@ -139,6 +139,10 @@
     background-repeat: no-repeat;
     background-size: 350px 457px;
 
+    @media (min-resolution: $retina__dpi), (min-resolution: $retina__dppx) {
+      background-image: url("../img/reviews-background-tablet@2x.jpg");
+    }
+
     &::before {
       left: -20px;
       width: calc(100% + 20px);
